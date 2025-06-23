@@ -20,6 +20,15 @@ jobs:
         run: docker build -t travel-agency-frontend .
         working-directory: ./frontend
 
+      - name: List frontend directory contents (debug)
+        run: ls -l
+        working-directory: ./frontend
+
+      - name: Show frontend Docker context files (debug)
+        run: |
+          find . -type f
+        working-directory: ./frontend
+
       - name: Run backend tests
         run: |
           npm install
