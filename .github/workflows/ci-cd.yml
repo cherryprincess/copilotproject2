@@ -41,3 +41,11 @@ jobs:
           npm run build
           # Add test command if available
         working-directory: ./frontend
+
+      - name: Scan frontend Docker image for vulnerabilities
+        uses: aquasecurity/trivy-action@v0.16.0
+        with:
+          image-ref: travel-agency-frontend
+          format: table
+          exit-code: 0
+          ignore-unfixed: true
