@@ -43,7 +43,7 @@ jobs:
         working-directory: ./frontend
 
       - name: Scan frontend Docker image for vulnerabilities
-        uses: aquasecurity/trivy-action@main
+        uses: aquasecurity/trivy-action@v0.20.0
         with:
           image-ref: travel-agency-frontend
           format: table
