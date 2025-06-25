@@ -51,8 +51,8 @@ jobs:
           sudo apt-get update && \
           sudo apt-get install -y trivy
 
-      - name: Scan frontend Docker image for vulnerabilities
-        uses: aquasecurity/trivy-action@v0.19.2
+      - name: Scan frontend Docker image for vulnerabilities        
+        uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: travel-agency-frontend
           format: table
