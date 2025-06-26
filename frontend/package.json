@@ -13,6 +13,11 @@
   },
   "devDependencies": {
     "@vitejs/plugin-react": "^4.4.1",
-    "vite": "^6.3.5"
+    "vite": "^6.3.5",
+    "esbuild": "^0.25.0"
+  },
+  "resolutions": {
+    "brace-expansion": "^2.0.2",
+    "cross-spawn": "^7.0.5"
   }
 }
