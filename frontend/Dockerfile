@@ -2,7 +2,7 @@
 FROM node:18-slim AS builder
 WORKDIR /app
 COPY package*.json ./
-RUN apt-get update && apt-get upgrade -y libsystemd0 && npm install --omit=dev
+RUN apt-get update && apt-get upgrade -y libsystemd0 && npm install
 COPY . .
 RUN npm run build
 
